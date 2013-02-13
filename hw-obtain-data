@@ -1,0 +1,70 @@
+1. What are the types of data available to you?
+
+I am looking at STARR test results in 2012. STARR tests are standardized tests conducted across California. These results are formatted as a relational
+table, with attributes:
+	County Code
+	District Code
+	School Code
+	Charter Number
+	Test Year
+	Subgroup
+	Test Type
+	CAPA Assessment Level
+	Total STAR Enrollment
+	Total Tested At Entity Level
+	Total Tested At Subgroup Level
+	Grade
+	Test Id
+	STAR Reported Enrollment/CAPA Eligible
+	Students Tested
+	Percent Tested
+	Mean Scale Score
+	Percentage Advanced
+	Percentage Proficient
+	Percentage At Or Above Proficient
+	Percentage Basic
+	Percentage Below Basic
+	Percentage Far Below Basic
+	Students with Scores
+	CM/STS Average Percent Correct
+Among the more interesting attributes are School Code, Grade, Mean Scale Score, and the Percentage data.
+
+2. For data sets: how many records are in the data set?
+
+339321 records
+
+3. Provide an "interesting" record, explain its properties and why it is interesting.
+1	County Code
+10017	District Code
+130401	School Code
+0	Charter Number
+2012	Test Year
+1	Subgroup
+C	Test Type
+0	CAPA Assessment Level
+189	Total STAR Enrollment
+188	Total Tested At Entity Level
+188	Total Tested At Subgroup Level
+13	Grade
+18	Test Id
+<blank>	STAR Reported Enrollment/CAPA Eligible
+11	Students Tested
+<blank>	Percent Tested
+177	Mean Scale Score
+0	Percentage Advanced
+0	Percentage Proficient
+0	Percentage At Or Above Proficient
+0	Percentage Basic
+0	Percentage Below Basic
+100	Percentage Far Below Basic
+1	Students with Scores
+<blank>	CM/STS Average Percent Correct
+
+This record is interesting for a number of reasons. First, if you do a join using this record with the entities list, you will find that this school code points to Alameda's Juvenile Hall/Court. This record could provide interesting information comparing education in juvenile hall versus education in private and/or public schools. Another interesting point is that all students scored in the lowest percentile. Is this indicative of a lack of effort to educate young criminals? Finally, it is interesting to point out that even though 11 students were tested, only 1 had scores to report. Does this imply that the 10 other students did not fill in any answers? Or something else? We can use this among other juvenile hall records to see if there's a trend present here that separates them from other schools.
+
+4. What are 3 questions you could answer using your data?
+
+Where are the best performing schools located?
+Are Juvenile hall schools exhibiting interesting differences from other schools?
+Do private schools perform better than public schools?
+
