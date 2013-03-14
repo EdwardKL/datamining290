@@ -3,6 +3,8 @@
 #
 ##/
 
+import math
+
 dataset = [-13.65089255716321, -0.5409562932238607, -88.4726466247223, 39.30158828358612, 4.066458182574449, 64.64143300482378, 38.68269424751338, 33.42013676314311, 31.18603331719732, -0.2027616409406292, 45.13590038987272, 30.791899783552395, 61.1727490302448, 18.167220741624856, 88.88077709786394, -1.3808002119514704, 50.14991362212521, 55.92029956281276, -6.759813255299466, 34.28290084421072]
 k = 2 # number of clusters
 
@@ -14,22 +16,22 @@ k = 2 # number of clusters
 def pick_centroids(xs, num):
     """Return list of num centroids given a list of numbers in xs"""
     ###
-    # TODO select and return centroids
-    return [1,2]
+    # select and return centroids
+    return xs[:num]
     ##/
 
 def distance(a, b):
     """Return the distance of numbers a and b"""
     ###
-    # TODO return correct expression
-    return 0
+    # return correct expression
+    return math.fabs(a - b)
     ##/
 
 def centroid(xs):
     """Return the centroid number given a list of numbers, xs"""
     ###
-    # TODO calculate and return centroid
-    return 0
+    # calculate and return centroid
+    return sum(xs)/len(xs)
     ##/
 
 def cluster(xs, centroids):
@@ -37,14 +39,12 @@ def cluster(xs, centroids):
     are lists of numbers."""
 
     clusters = [[] for c in centroids]
-
     for x in xs:
         # find the closest cluster to x
         dist, cluster_id = min((distance(x, c), cluster_id)
                 for cluster_id, c in enumerate(centroids))
         # place x in cluster
         clusters[cluster_id].append(x)
-
     return clusters
 
 def iterate_centroids(xs, centroids):
