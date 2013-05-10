@@ -1,0 +1,13 @@
+1. The price elasticity of weekday prices (DOW 1-5): -1.763
+2. The price elasticity of weekend prices (DOW 6,7): -1.43691
+3. We want to maximize price * predicted_num_of_rented_rooms(price) for rooms <= 100.
+a. For the weekday, ln(rooms) = 15.82147 - 1.763 * ln(price)
+   so profit is price * rooms, or price * e^(15.82147 - 1.763 * ln(price)).
+   First we need to find the bounds of the graph, which will be predicted num of rooms from 1 to 100. Price must be >= 579.435 if we want to rent out at most 100 rooms. If we want to rent at least one room, price must be <= 7896.5. The graph slopes immediately downwards, so we know the maximum is at the beginning of the graph.
+
+
+   Thus a price of $579.435 ~ $579.44 is recommended to get a maximal profit of $57943.5.
+
+b. For the weekend ln(rooms) = 14.32619 - 1.43691 * ln(price). Using the same method as above, we find bounds of: $867.162 to $21378.4. Yet again, the graph reaches its maximum at the beginning of the bounds.
+
+    Thus a price of $867.162 is recommended to get a maximal profit of $86716.2.
